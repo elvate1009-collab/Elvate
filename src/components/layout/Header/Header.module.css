@@ -1,0 +1,144 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: var(--clr-bg-main);
+  z-index: 1000;
+  transition: all var(--transition);
+  border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+  box-shadow: var(--shadow-sm);
+  height: 70px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  display: flex;
+  align-items: baseline;
+}
+
+.logoDot {
+  color: var(--clr-accent);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.navList {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.navLink {
+  font-weight: 500;
+  color: var(--clr-text-main);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--clr-accent);
+  transition: width var(--transition);
+}
+
+.navLink:hover::after, .active::after {
+  width: 100%;
+}
+
+.navLink:hover {
+  color: var(--clr-primary);
+}
+
+.active {
+  color: var(--clr-primary);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--clr-primary);
+  z-index: 1001;
+}
+
+.overlay {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--clr-bg-main);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px var(--space-lg) var(--space-lg);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    transition: right 0.4s ease;
+    z-index: 1000;
+  }
+  
+  .nav.open {
+    right: 0;
+  }
+  
+  .navList {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-md);
+  }
+  
+  .navLink {
+    display: block;
+    font-size: 1.2rem;
+  }
+  
+  .navCta {
+    margin-top: var(--space-lg);
+    width: 100%;
+  }
+  
+  .navCta > * {
+    width: 100%;
+  }
+  
+  .overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+  }
+}

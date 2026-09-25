@@ -1,0 +1,19 @@
+.stat {
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.value {
+  display: block;
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--clr-accent);
+  margin-bottom: var(--space-xs);
+}
+
+.label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--clr-bg-main);
+}

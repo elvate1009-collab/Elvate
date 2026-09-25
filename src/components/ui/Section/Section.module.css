@@ -1,0 +1,16 @@
+.section {
+  padding: var(--space-xxl) 0;
+}
+
+.main {
+  background-color: var(--clr-bg-main);
+}
+
+.alt {
+  background-color: var(--clr-bg-alt);
+}
+
+.dark {
+  background-color: var(--clr-primary);
+  color: var(--clr-bg-main);
+}

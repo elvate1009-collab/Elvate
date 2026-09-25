@@ -1,0 +1,111 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.heading {
+  font-size: var(--fs-h2);
+  color: var(--clr-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.desc {
+  color: var(--clr-text-light);
+  margin-bottom: var(--space-lg);
+  font-size: 1.1rem;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--clr-accent);
+  margin-top: 4px;
+}
+
+.infoItem h4 {
+  color: var(--clr-primary);
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.infoItem p {
+  color: var(--clr-text-light);
+}
+
+.formCard {
+  background-color: var(--clr-bg-main);
+  padding: var(--space-lg);
+  border-radius: var(--br-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--clr-border);
+}
+
+@media (min-width: 768px) {
+  .formCard {
+    padding: var(--space-xl);
+  }
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-md);
+  color: var(--clr-primary);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (min-width: 600px) {
+  .formRow {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+}
+
+.successMsg {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: var(--space-md);
+  border-radius: var(--br-md);
+  border: 1px solid #10b981;
+  text-align: center;
+  font-weight: 500;
+}
+
+.mapSection {
+  height: 400px;
+  width: 100%;
+  background-color: var(--clr-bg-alt);
+}
+
+.mapPlaceholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-text-muted);
+  font-size: 1.5rem;
+  border-top: 1px solid var(--clr-border);
+}

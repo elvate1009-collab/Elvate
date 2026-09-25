@@ -1,0 +1,76 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.text {
+  margin-bottom: var(--space-md);
+  font-size: 1.1rem;
+  color: var(--clr-text-light);
+}
+
+.missionVision {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.card {
+  background-color: var(--clr-primary-light);
+  color: var(--clr-bg-main);
+  padding: var(--space-lg);
+  border-radius: var(--br-md);
+  border-left: 4px solid var(--clr-accent);
+}
+
+.cardTitle {
+  color: var(--clr-accent);
+  margin-bottom: var(--space-xs);
+  font-size: 1.5rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .valuesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.valueItem {
+  background-color: var(--clr-bg-main);
+  padding: var(--space-lg);
+  border-radius: var(--br-md);
+  border: 1px solid var(--clr-border);
+  text-align: center;
+  transition: transform var(--transition);
+}
+
+.valueItem:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.valueTitle {
+  color: var(--clr-primary);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-sm);
+}

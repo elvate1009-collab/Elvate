@@ -1,0 +1,43 @@
+.group {
+  margin-bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+  color: var(--clr-text-main);
+  font-size: 0.95rem;
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--br-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--clr-bg-alt);
+  transition: border-color var(--transition);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--clr-primary);
+  background-color: var(--clr-bg-main);
+}
+
+textarea.input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.hasError {
+  border-color: var(--clr-error);
+}
+
+.errorText {
+  color: var(--clr-error);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}

@@ -1,0 +1,38 @@
+.card {
+  background-color: var(--clr-bg-alt);
+  padding: var(--space-lg);
+  border-radius: var(--br-lg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.icon {
+  color: var(--clr-accent);
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.3;
+}
+
+.text {
+  font-style: italic;
+  color: var(--clr-text-main);
+  flex-grow: 1;
+  margin-bottom: var(--space-md);
+}
+
+.author {
+  border-top: 1px solid var(--clr-border);
+  padding-top: var(--space-sm);
+}
+
+.name {
+  font-size: 1.1rem;
+  color: var(--clr-primary);
+  margin-bottom: 0.2rem;
+}
+
+.company {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+}

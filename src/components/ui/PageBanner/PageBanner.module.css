@@ -1,0 +1,36 @@
+.banner {
+  background-color: var(--clr-primary);
+  color: var(--clr-bg-main);
+  padding: calc(var(--space-xxl) * 1.5) 0 var(--space-xxl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--clr-primary-light) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.title {
+  font-size: var(--fs-h1);
+  margin-bottom: var(--space-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--clr-accent);
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}

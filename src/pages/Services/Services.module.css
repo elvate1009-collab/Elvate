@@ -1,0 +1,75 @@
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-bg-alt);
+  border-radius: var(--br-lg);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.iconWrap {
+  background-color: var(--clr-primary);
+  color: var(--clr-accent);
+  padding: var(--space-lg);
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  padding: var(--space-lg);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--clr-primary);
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.desc {
+  color: var(--clr-text-light);
+  margin-bottom: var(--space-md);
+}
+
+.list {
+  margin-top: auto;
+  border-top: 1px solid var(--clr-border);
+  padding-top: var(--space-md);
+}
+
+.listItem {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--clr-text-main);
+  font-size: 0.95rem;
+}
+
+.listItem::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--clr-accent);
+  font-weight: bold;
+}

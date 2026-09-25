@@ -1,0 +1,36 @@
+.wrapper {
+  margin-bottom: var(--space-xl);
+  max-width: 800px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.eyebrow {
+  display: block;
+  font-weight: 700;
+  color: var(--clr-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-xs);
+  font-size: 0.875rem;
+}
+
+.title {
+  font-size: var(--fs-h2);
+  color: inherit;
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.subtitle {
+  color: var(--clr-text-muted);
+  font-size: 1.125rem;
+}
