@@ -8,6 +8,7 @@ import Section from '../../components/ui/Section/Section';
 import Button from '../../components/ui/Button/Button';
 import { services } from '../../data/services';
 import { productCategories } from '../../data/products';
+import { siteConfig } from '../../data/siteConfig';
 import { buildWhatsAppEnquiryUrl } from '../../utils/whatsapp';
 import styles from './Contact.module.css';
 
