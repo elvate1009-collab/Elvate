@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { navLinks } from '../../../data/navLinks';
-import { siteConfig } from '../../../data/siteConfig';
+import logo from '../../../assets/logo.png';
 import Container from '../../ui/Container/Container';
 import Button from '../../ui/Button/Button';
 import styles from './Header.module.css';
@@ -39,9 +39,8 @@ const Header = () => {
   return (
     <header className={[styles.header, isScrolled ? styles.scrolled : ''].join(' ').trim()}>
       <Container className={styles.container}>
-        <Link to="/" className={styles.logo} onClick={closeMenu}>
-          {siteConfig.companyName}
-          <span className={styles.logoDot}>.in</span>
+        <Link to="/" className={styles.logo} onClick={closeMenu} aria-label="Elvate.in — Home">
+          <img src={logo} alt="Elvate.in logo" className={styles.logoImg} />
         </Link>
         
         <nav className={[styles.nav, isOpen ? styles.open : ''].join(' ').trim()}>

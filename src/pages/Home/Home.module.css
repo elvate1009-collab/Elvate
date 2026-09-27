@@ -1,9 +1,14 @@
 .hero {
-  background-color: var(--clr-primary);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(14, 165, 233, 0.2), transparent 26%),
+    linear-gradient(135deg, #001a35 0%, var(--clr-primary) 52%, #063866 100%);
   color: var(--clr-bg-main);
-  padding: calc(var(--space-xxl) * 2) 0 var(--space-xxl);
+  padding: clamp(7rem, 15vw, 10rem) 0 clamp(4rem, 8vw, 6rem);
   position: relative;
   overflow: hidden;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
 }
 
 .hero::before {
@@ -27,9 +32,11 @@
 }
 
 .heroTitle {
-  font-size: var(--fs-h1);
-  line-height: 1.1;
+  font-size: clamp(2.65rem, 6vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
   margin-bottom: var(--space-md);
+  max-width: 850px;
 }
 
 .highlight {
@@ -37,10 +44,10 @@
 }
 
 .heroSubtitle {
-  font-size: 1.2rem;
-  color: var(--clr-text-muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #c7e6f7;
   margin-bottom: var(--space-lg);
-  max-width: 600px;
+  max-width: 640px;
 }
 
 .heroBtns {
@@ -56,8 +63,9 @@
 }
 
 .statsSection {
-  background-color: var(--clr-primary-light);
-  border-bottom: 2px solid var(--clr-accent);
+  background: linear-gradient(100deg, var(--clr-primary), var(--clr-primary-light));
+  border-bottom: 3px solid var(--clr-accent);
+  position: relative;
 }
 
 .statsGrid {

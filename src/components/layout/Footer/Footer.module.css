@@ -24,15 +24,20 @@
 }
 
 .brand .logo {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--clr-bg-main);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-bottom: var(--space-sm);
 }
 
-.logoDot {
-  color: var(--clr-accent);
+/* Transparent PNG on a white rounded chip — interior transparent
+   areas read as white, so the logo art always looks original */
+.logoImg {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-radius: var(--br-md);
+  padding: 10px 14px;
 }
 
 .desc {

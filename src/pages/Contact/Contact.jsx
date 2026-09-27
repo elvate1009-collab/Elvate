@@ -6,30 +6,29 @@ import PageBanner from '../../components/ui/PageBanner/PageBanner';
 import Container from '../../components/ui/Container/Container';
 import Section from '../../components/ui/Section/Section';
 import Button from '../../components/ui/Button/Button';
-import { siteConfig } from '../../data/siteConfig';
 import { services } from '../../data/services';
 import { productCategories } from '../../data/products';
+import { buildWhatsAppEnquiryUrl } from '../../utils/whatsapp';
 import styles from './Contact.module.css';
 
 const Contact = () => {
   useDocumentTitle('Contact Us', 'Get in touch with Elvate for all your IT needs.');
   const location = useLocation();
-  const [interestText, setInterestText] = useState('');
+  const [interestSubject, setInterestSubject] = useState('');
 
-  // Pre-fill "interest" from URL query params (e.g. from Products page)
+  // Pre-fill enquiry subject from URL query params (e.g. from Products page)
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const interestParam = params.get('interest');
     if (interestParam) {
       const service = services.find(s => s.id === interestParam);
       const product = productCategories.find(p => p.id === interestParam);
-      if (service) setInterestText(`I am interested in the ${service.title} service.`);
-      else if (product) setInterestText(`I am interested in your ${product.title} products.`);
+      if (service) setInterestSubject(service.title);
+      else if (product) setInterestSubject(product.title);
     }
   }, [location]);
 
-  const whatsappMessage = interestText ? `Hi Elvate, ${interestText}` : 'Hi Elvate, I would like to inquire about your services.';
-  const whatsappUrl = `${siteConfig.whatsappLink}?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = buildWhatsAppEnquiryUrl(interestSubject);
 
   return (
     <div>

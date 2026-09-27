@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import Container from '../../components/ui/Container/Container';
 import Section from '../../components/ui/Section/Section';
@@ -16,12 +15,12 @@ import { stats } from '../../data/stats';
 import { features } from '../../data/features';
 import { testimonials } from '../../data/testimonials';
 import { brands } from '../../data/brands';
+import { buildWhatsAppEnquiryUrl } from '../../utils/whatsapp';
 
 import styles from './Home.module.css';
 
 const Home = () => {
   useDocumentTitle('Home', 'Elvate - Premium IT Services & Hardware Solutions');
-  const navigate = useNavigate();
 
   return (
     <div>
@@ -97,8 +96,10 @@ const Home = () => {
                 <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
                   <Button 
                     variant="outline" 
-                    onClick={() => navigate(`/contact?interest=${cat.id}`)}
+                    href={buildWhatsAppEnquiryUrl(cat.title, cat.examples.split(', '))}
                     style={{ width: '100%', fontSize: '0.9rem' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Enquire Now
                   </Button>

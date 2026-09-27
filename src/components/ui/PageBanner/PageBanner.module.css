@@ -1,7 +1,7 @@
 .banner {
-  background-color: var(--clr-primary);
+  background: linear-gradient(135deg, #001a35, var(--clr-primary-light));
   color: var(--clr-bg-main);
-  padding: calc(var(--space-xxl) * 1.5) 0 var(--space-xxl);
+  padding: clamp(7rem, 13vw, 9rem) 0 clamp(3.5rem, 7vw, 5rem);
   text-align: center;
   position: relative;
   overflow: hidden;

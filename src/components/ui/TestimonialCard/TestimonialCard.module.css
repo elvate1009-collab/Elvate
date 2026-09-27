@@ -1,10 +1,17 @@
 .card {
-  background-color: var(--clr-bg-alt);
+  background: linear-gradient(145deg, #f1f9fd, #ffffff);
+  border: 1px solid var(--clr-border);
   padding: var(--space-lg);
-  border-radius: var(--br-lg);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
 }
 
 .icon {

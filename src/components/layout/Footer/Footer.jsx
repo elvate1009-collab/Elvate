@@ -4,6 +4,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { siteConfig } from '../../../data/siteConfig';
 import { navLinks } from '../../../data/navLinks';
 import { services } from '../../../data/services';
+import logo from '../../../assets/logo.png';
 import Container from '../../ui/Container/Container';
 import styles from './Footer.module.css';
 
@@ -16,9 +17,8 @@ const Footer = () => {
         <div className={styles.grid}>
           {/* Brand Info */}
           <div className={styles.brand}>
-            <Link to="/" className={styles.logo}>
-              {siteConfig.companyName}
-              <span className={styles.logoDot}>.in</span>
+            <Link to="/" className={styles.logo} aria-label="Elvate.in — Home">
+              <img src={logo} alt="Elvate.in logo" className={styles.logoImg} />
             </Link>
             <p className={styles.desc}>
               Delivering innovative IT services, robust networks, and top-tier hardware solutions for modern businesses.

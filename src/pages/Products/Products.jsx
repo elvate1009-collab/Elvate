@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import PageBanner from '../../components/ui/PageBanner/PageBanner';
 import Container from '../../components/ui/Container/Container';
@@ -8,11 +7,11 @@ import Card from '../../components/ui/Card/Card';
 import Button from '../../components/ui/Button/Button';
 import CTABanner from '../../components/ui/CTABanner/CTABanner';
 import { productCategories } from '../../data/products';
+import { buildWhatsAppEnquiryUrl } from '../../utils/whatsapp';
 import styles from './Products.module.css';
 
 const Products = () => {
   useDocumentTitle('Products', 'Premium hardware and networking equipment sales.');
-  const navigate = useNavigate();
 
   return (
     <div>
@@ -38,8 +37,10 @@ const Products = () => {
                   <p className={styles.examples}><strong>Top items:</strong> {cat.examples}</p>
                   <Button 
                     variant="outline" 
-                    onClick={() => navigate(`/contact?interest=${cat.id}`)}
+                    href={buildWhatsAppEnquiryUrl(cat.title, cat.examples.split(', '))}
                     className={styles.btn}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Enquire Now
                   </Button>

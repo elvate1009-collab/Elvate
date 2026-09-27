@@ -6,15 +6,15 @@
   --clr-accent: #0EA5E9; /* Sky Blue */
   --clr-accent-hover: #0284C7;
   
-  --clr-text-main: #333333;
-  --clr-text-light: #555555;
-  --clr-text-muted: #888888;
+  --clr-text-main: #102a43;
+  --clr-text-light: #486581;
+  --clr-text-muted: #829ab1;
   
   --clr-bg-main: #FFFFFF;
-  --clr-bg-alt: #F8F9FA;
+  --clr-bg-alt: #F2F8FC;
   --clr-bg-footer: #001224; /* Darker Navy for footer */
   
-  --clr-border: #E5E7EB;
+  --clr-border: #D9EAF4;
   --clr-error: #EF4444;
 
   /* Typography */
@@ -40,11 +40,12 @@
   --br-md: 8px;
   --br-lg: 16px;
 
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --shadow-sm: 0 4px 14px rgba(0, 31, 63, 0.08);
+  --shadow-md: 0 10px 24px rgba(0, 31, 63, 0.12);
+  --shadow-lg: 0 18px 42px rgba(0, 31, 63, 0.16);
+  --shadow-accent: 0 12px 28px rgba(14, 165, 233, 0.24);
   
-  --transition: 0.3s ease-in-out;
+  --transition: 0.25s ease;
 }
 
 /* Resets */
@@ -88,6 +89,16 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--clr-accent);
+  color: var(--clr-primary);
 }
 
 /* Utilities for screen readers */

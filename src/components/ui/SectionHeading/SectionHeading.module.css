@@ -1,6 +1,21 @@
 .wrapper {
-  margin-bottom: var(--space-xl);
+  margin-bottom: clamp(2rem, 5vw, 3rem);
   max-width: 800px;
+}
+
+.wrapper::after {
+  content: '';
+  display: block;
+  width: 46px;
+  height: 4px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--clr-accent), #7dd3fc);
+  margin-top: 1.25rem;
+}
+
+.center::after {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .center {

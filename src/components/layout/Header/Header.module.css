@@ -2,16 +2,18 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: 80px;
-  background-color: var(--clr-bg-main);
+  height: 82px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
   z-index: 1000;
   transition: all var(--transition);
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(217, 234, 244, 0.65);
 }
 
 .scrolled {
   box-shadow: var(--shadow-sm);
-  height: 70px;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .container {
@@ -22,15 +24,21 @@
 }
 
 .logo {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--clr-primary);
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
-.logoDot {
-  color: var(--clr-accent);
+/* Logo is ~2:1 (804x406); sized by height so it scales cleanly */
+.logoImg {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .logoImg {
+    height: 44px;
+  }
 }
 
 .nav {
