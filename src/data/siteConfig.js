@@ -2,7 +2,7 @@ export const siteConfig = {
   companyName: "Elvate",
   phone: "+91 96310 28482",
   email: "elvate1009@gmail.com",
-  address: "e 17, 9, Gali Number 9, Block D, Block A, Dabri Extension East, Dabri, Delhi, 110045, India",
+  address: "RZE-17, Gali Number 9, Block D, Block A, Dabri Extension East, Dabri, Delhi, 110045, India",
   businessHours: "Mon - Sat: 9:00 AM - 7:00 PM",
   founder: "Sukh Sagar Kumar",
   socialLinks: {
